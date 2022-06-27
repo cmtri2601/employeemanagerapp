@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
-import { Employee } from './employee';
-import { EmployeeService } from './employee.service';
+import { Employee } from '../model/employee';
+import { EmployeeService } from '../service/employee.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'employeemanagerapp';
   public employees?: Employee[] ;
 
-  constructor(private employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService){}
 
   ngOnInit(): void {
     this.getEmployees();
